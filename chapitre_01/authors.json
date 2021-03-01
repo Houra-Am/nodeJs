@@ -1,0 +1,25 @@
+{
+  "user1": {
+    "name": "Lawrence Nowell",
+    "nationality": "UK",
+    "id": 1
+  },
+
+  "user2": {
+    "name": "William Shakespeare",
+    "nationality": "UK",
+    "id": 2
+  },
+
+  "user3": {
+    "name": "Charles Dickens",
+    "nationality": "US",
+    "id": 3
+  },
+
+  "user4": {
+    "name": "Oscar Wilde",
+    "nationality": "UK",
+    "id": 4
+  }
+}

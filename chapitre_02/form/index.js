@@ -18,3 +18,8 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+
+app.use(express.urlencoded({ extended: true }));
+app.post("/login", (req, res) => {
+  console.log(req.body);
+});

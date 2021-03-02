@@ -1,0 +1,17 @@
+[
+  {
+    "lang": "fr",
+    "greeting": "Bonjour, ça va ?",
+    "image": "./img/bonjour.jpg"
+  },
+  {
+    "lang": "en",
+    "greeting": "Hi, how are you?",
+    "image": "./img/hello.jpg"
+  },
+  {
+    "lang": "es",
+    "greeting": "Hola, ¿Cómo estás?",
+    "image": "./img/hola.png"
+  }
+]

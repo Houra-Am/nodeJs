@@ -1,6 +1,7 @@
 const { request } = require("express");
 const express = require("express");
 const app = express();
+app.use(express.json());
 
 const authors = [
   {
@@ -34,10 +35,12 @@ const authors = [
 
 const port = 8000;
 app.listen(port, () => {
-  console.log("Server started on port: " + port);
+  console.log(
+    `Server started on port: to launch, click https://localhost:${port}`
+  );
 });
 
-app.get("/authors", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Authors API");
 });
 
@@ -51,7 +54,18 @@ app.get("/authors/:id/", (req, res) => {
 app.get("/authors/:id/books/:books", (req, res) => {
   const id = parseInt(req.params.id);
   const author = authors.find((author) => author.id === id);
-  const books = authors.books[req.params.books];
-  console.log(books);
-  res.send(`${author.books}`);
+  const books = authors[req.params.books].books;
+  console.log(author);
+  //  console.log(authors[req.params.books.books]);
+  res.send(`${authors[req.params.books].books}`);
 });
+
+app.get("/json/authors/:id", (req, res) => {
+  console.log(req.params.id);
+});
+
+app.get("*", (req, res) => {
+  res.send("Error 404");
+});
+
+//The author with the ID ${req.params.id} does not exist
